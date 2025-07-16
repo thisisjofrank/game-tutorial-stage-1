@@ -1,0 +1,78 @@
+{
+    "themes": {
+        "retro": {
+            "colors": {
+                "background": "#000000",
+                "text": "#00ff00"
+            },
+            "player": {
+                "color": "#00ff00"
+            },
+            "obstacles": {
+                "color": "#ff0000"
+            },
+            "ground": {
+                "color": "#333333"
+            }
+        },
+        "nature": {
+            "colors": {
+                "background": "#87CEEB",
+                "text": "#2F4F2F"
+            },
+            "player": {
+                "color": "#228B22"
+            },
+            "obstacles": {
+                "color": "#8B4513"
+            },
+            "ground": {
+                "color": "#9ACD32"
+            }
+        },
+        "neon": {
+            "colors": {
+                "background": "#0a0a0a",
+                "text": "#ff00ff"
+            },
+            "player": {
+                "color": "#00ffff"
+            },
+            "obstacles": {
+                "color": "#ff1493"
+            },
+            "ground": {
+                "color": "#4b0082"
+            }
+        }
+    },
+    "presets": {
+        "easy": {
+            "obstacles": {
+                "speed": 3,
+                "spawnRate": 0.005
+            },
+            "player": {
+                "jumpHeight": 20
+            }
+        },
+        "normal": {
+            "obstacles": {
+                "speed": 5,
+                "spawnRate": 0.01
+            },
+            "player": {
+                "jumpHeight": 15
+            }
+        },
+        "hard": {
+            "obstacles": {
+                "speed": 8,
+                "spawnRate": 0.02
+            },
+            "player": {
+                "jumpHeight": 12
+            }
+        }
+    }
+}
