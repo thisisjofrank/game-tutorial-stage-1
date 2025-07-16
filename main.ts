@@ -1,4 +1,3 @@
-import { serve } from "@std/http/server";
 import { serveDir } from "@std/http/file-server";
 
 const handler = (req: Request): Response => {
@@ -14,6 +13,6 @@ const handler = (req: Request): Response => {
   });
 };
 
-const port = parseInt(Deno.env.get("PORT") || "8000");
+const port = parseInt(Deno.env.get("PORT") || "8001");
 console.log(`🚀 Stage 1 - Server starting on port ${port}`);
-serve(handler, { port });
+Deno.serve({ port }, handler);
