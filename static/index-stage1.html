@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 1: Dino Game Setup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            border: 2px solid #333;
+            background-color: white;
+        }
+        
+        .info {
+            margin-top: 20px;
+            text-align: center;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🦕 Stage 1: Basic Deno Setup</h1>
+    <canvas id="gameCanvas"></canvas>
+    
+    <div class="info">
+        <h3>What we accomplished in Stage 1:</h3>
+        <ul>
+            <li>✅ Set up Deno server</li>
+            <li>✅ Created basic HTML page</li>
+            <li>✅ Initialized canvas element</li>
+            <li>✅ Basic game class structure</li>
+        </ul>
+        <p><strong>Next up:</strong> Stage 2 will add animation loops and moving elements!</p>
+    </div>
+
+    <script type="module">
+        import { Game } from './game-stage1.js';
+        
+        const canvas = document.getElementById('gameCanvas');
+        const game = new Game(canvas);
+        game.start();
+    </script>
+</body>
+</html>
