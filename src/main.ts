@@ -3,6 +3,7 @@ import { apiRouter, healthRouter } from "./routes/api.routes.ts";
 
 // Deno Deploy uses dynamic ports, fallback to 8000 for local dev
 const PORT = parseInt(Deno.env.get("PORT") || "8000");
+const HOST = Deno.env.get("HOST") || "localhost";
 
 const app = new Application();
 
@@ -22,18 +23,9 @@ app.use(async (context, next) => {
 app.use(apiRouter.routes());
 app.use(apiRouter.allowedMethods());
 
-// Legacy health route
-app.use(healthRouter.routes());
-app.use(healthRouter.allowedMethods());
-
 app.listen({
     port: PORT,
 });
-
-console.log(`🦕 Server is running on port ${PORT}`);
-console.log(`🎯 Visit http://localhost:${PORT} to see the game`);
-console.log(`❤️ Health check available at http://localhost:${PORT}/health`);
-console.log(`🔧 API health check at http://localhost:${PORT}/api/health`);
 
 console.log(`🦕 Server is running on http://${HOST}:${PORT}`);
 console.log(`🎯 Visit http://${HOST}:${PORT} to see the game`);
