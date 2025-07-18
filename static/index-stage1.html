@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -11,7 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -20,7 +21,7 @@
             color: white;
             overflow-x: hidden;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -30,14 +31,14 @@
             padding: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-        
+
         h1 {
             text-align: center;
             margin-bottom: 20px;
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .stage-info {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
@@ -45,14 +46,14 @@
             margin-bottom: 20px;
             border-left: 4px solid #4CAF50;
         }
-        
+
         .foundation-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
-        
+
         .foundation-card {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 12px;
@@ -63,68 +64,68 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .foundation-card:hover {
             border-color: #4CAF50;
             background: rgba(76, 175, 80, 0.2);
             transform: translateY(-3px);
         }
-        
+
         .foundation-icon {
             font-size: 2.5rem;
             margin-bottom: 10px;
             display: block;
         }
-        
+
         .foundation-card h4 {
             color: #4CAF50;
             margin-bottom: 8px;
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
         }
-        
+
         .foundation-card p {
             font-size: clamp(0.8rem, 2vw, 0.9rem);
             opacity: 0.9;
         }
-        
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
-        
+
         .feature-card {
             background: rgba(255, 255, 255, 0.15);
             border-radius: 12px;
             padding: 15px;
             backdrop-filter: blur(5px);
         }
-        
+
         .feature-card h3 {
             color: #4CAF50;
             margin-bottom: 10px;
             font-size: clamp(1rem, 3vw, 1.2rem);
         }
-        
+
         .feature-card ul {
             list-style: none;
             padding-left: 0;
         }
-        
+
         .feature-card li {
             margin: 5px 0;
             padding-left: 20px;
             position: relative;
             font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
-        
+
         .feature-card li::before {
             content: "✅";
             position: absolute;
             left: 0;
         }
-        
+
         .game-container {
             text-align: center;
             margin: 20px 0;
@@ -132,7 +133,7 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
         }
-        
+
         #gameCanvas {
             border: 3px solid #4CAF50;
             border-radius: 10px;
@@ -143,7 +144,7 @@
             height: auto;
             touch-action: manipulation;
         }
-        
+
         .controls {
             margin: 15px 0;
             display: flex;
@@ -151,27 +152,27 @@
             gap: 10px;
             justify-content: center;
         }
-        
+
         .control-group {
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             padding: 10px 15px;
             min-width: 200px;
         }
-        
+
         .control-group h4 {
             color: #4CAF50;
             margin-bottom: 8px;
             font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
-        
+
         .control-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             justify-content: center;
         }
-        
+
         .btn {
             background: linear-gradient(45deg, #4CAF50, #45a049);
             color: white;
@@ -184,30 +185,31 @@
             touch-action: manipulation;
             user-select: none;
         }
-        
-        .btn:hover, .btn:focus {
+
+        .btn:hover,
+        .btn:focus {
             background: linear-gradient(45deg, #45a049, #4CAF50);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
         }
-        
+
         .btn:active {
             transform: translateY(0);
         }
-        
+
         .btn.demo-btn {
             background: linear-gradient(45deg, #2196F3, #1976D2);
         }
-        
+
         .btn.setup-btn {
             background: linear-gradient(45deg, #FF9800, #F57C00);
         }
-        
+
         .navigation {
             text-align: center;
             margin: 20px 0;
         }
-        
+
         .nav-btn {
             background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
@@ -219,12 +221,12 @@
             transition: all 0.3s ease;
             font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
-        
+
         .nav-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
-        
+
         .foundation-info {
             background: rgba(76, 175, 80, 0.2);
             border: 2px solid #4CAF50;
@@ -233,7 +235,7 @@
             margin: 15px 0;
             text-align: center;
         }
-        
+
         .setup-checklist {
             background: rgba(255, 152, 0, 0.2);
             border: 2px solid #FF9800;
@@ -241,18 +243,18 @@
             padding: 15px;
             margin: 15px 0;
         }
-        
+
         .setup-checklist h4 {
             color: #FF9800;
             margin-bottom: 10px;
         }
-        
+
         .checklist-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
         }
-        
+
         .checklist-item {
             display: flex;
             align-items: center;
@@ -260,12 +262,12 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
         }
-        
+
         .checklist-icon {
             margin-right: 10px;
             font-size: 1.2rem;
         }
-        
+
         .tutorial-progress {
             background: rgba(33, 150, 243, 0.2);
             border: 2px solid #2196F3;
@@ -274,7 +276,7 @@
             margin: 15px 0;
             text-align: center;
         }
-        
+
         .progress-bar {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 10px;
@@ -282,93 +284,104 @@
             margin: 10px 0;
             overflow: hidden;
         }
-        
+
         .progress-fill {
             background: linear-gradient(90deg, #4CAF50, #45a049);
             height: 100%;
-            width: 4.17%; /* 1 out of 24 stages */
+            width: 4.17%;
+            /* 1 out of 24 stages */
             border-radius: 10px;
             transition: width 0.3s ease;
         }
-        
+
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             body {
                 padding: 5px;
             }
-            
+
             .container {
                 padding: 15px;
                 border-radius: 15px;
             }
-            
+
             .feature-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .controls {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .control-group {
                 min-width: auto;
                 width: 100%;
                 max-width: 300px;
             }
-            
+
             .nav-btn {
                 display: block;
                 margin: 10px auto;
                 max-width: 200px;
             }
-            
+
             .foundation-grid {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
         }
-        
+
         @media (max-width: 480px) {
             .container {
                 padding: 10px;
             }
-            
+
             .game-container {
                 padding: 10px;
             }
-            
+
             #gameCanvas {
                 border-width: 2px;
             }
         }
-        
+
         /* Animation effects */
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
-        
+
         .foundation-card:hover .foundation-icon {
             animation: pulse 1s ease-in-out infinite;
         }
-        
+
         /* Gradient backgrounds for cards */
         .feature-card:nth-child(1) {
             background-image: radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.2) 1px, transparent 1px);
         }
-        
+
         .feature-card:nth-child(2) {
             background-image: radial-gradient(circle at 80% 20%, rgba(33, 150, 243, 0.2) 1px, transparent 1px);
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>🦕 Stage 1: Foundation & Setup</h1>
-        
+
         <div class="stage-info">
             <h2>🏗️ Welcome to the Foundation!</h2>
-            <p>Stage 1 establishes the core architecture and development environment for our comprehensive 24-stage Dino game tutorial. This is where we build the foundation that all subsequent stages will enhance and expand upon.</p>
+            <p>Stage 1 establishes the core architecture and development environment for our comprehensive 24-stage Dino
+                game tutorial. This is where we build the foundation that all subsequent stages will enhance and expand
+                upon.</p>
         </div>
 
         <div class="foundation-grid">
@@ -377,19 +390,19 @@
                 <h4>Project Architecture</h4>
                 <p>Modular design patterns and code organization</p>
             </div>
-            
+
             <div class="foundation-card" onclick="demonstrateFeature('canvas')">
                 <div class="foundation-icon">🎨</div>
                 <h4>Canvas System</h4>
                 <p>HTML5 Canvas setup and rendering pipeline</p>
             </div>
-            
+
             <div class="foundation-card" onclick="demonstrateFeature('events')">
                 <div class="foundation-icon">🎮</div>
                 <h4>Event Handling</h4>
                 <p>Keyboard, mouse, and touch input management</p>
             </div>
-            
+
             <div class="foundation-card" onclick="demonstrateFeature('config')">
                 <div class="foundation-icon">⚙️</div>
                 <h4>Configuration</h4>
@@ -408,7 +421,7 @@
                     <li>Hot reload capability</li>
                 </ul>
             </div>
-            
+
             <div class="feature-card">
                 <h3>🎯 Core Architecture</h3>
                 <ul>
@@ -462,12 +475,13 @@
 
         <div class="game-container">
             <canvas id="gameCanvas"></canvas>
-            
+
             <div class="foundation-info">
-                <p><strong>🎯 Foundation Demo:</strong> Interactive demonstration of core systems and architecture patterns.</p>
+                <p><strong>🎯 Foundation Demo:</strong> Interactive demonstration of core systems and architecture
+                    patterns.</p>
                 <p><strong>🎮 Controls:</strong> SPACE/CLICK - Navigate | ENTER - Toggle Demo | R - Restart</p>
             </div>
-            
+
             <div class="controls">
                 <div class="control-group">
                     <h4>🎮 Demo Controls</h4>
@@ -476,7 +490,7 @@
                         <button class="btn demo-btn" onclick="restartDemo()">Restart</button>
                     </div>
                 </div>
-                
+
                 <div class="control-group">
                     <h4>🔧 Setup Actions</h4>
                     <div class="control-buttons">
@@ -495,44 +509,44 @@
 
     <script type="module">
         import { Game } from './game-stage1.js';
-        
+
         let game;
-        
+
         async function initGame() {
             const canvas = document.getElementById('gameCanvas');
             game = new Game(canvas);
             game.init();
             game.start();
-            
+
             console.log('🦕 Stage 1: Foundation & Setup initialized!');
             console.log('🏗️ Project architecture established');
             console.log('🎨 Canvas rendering system ready');
             console.log('🎮 Event handling system active');
         }
-        
+
         // Global functions for buttons
-        window.demonstrateFeature = function(feature) {
+        window.demonstrateFeature = function (feature) {
             console.log(`🔍 Demonstrating: ${feature}`);
             if (game) {
                 game.handleSpacePress();
             }
         };
-        
-        window.toggleDemo = function() {
+
+        window.toggleDemo = function () {
             if (game) {
                 game.toggleDemo();
                 console.log('🔄 Demo mode toggled');
             }
         };
-        
-        window.restartDemo = function() {
+
+        window.restartDemo = function () {
             if (game) {
                 game.restart();
                 console.log('🔄 Demo restarted');
             }
         };
-        
-        window.checkSetup = function() {
+
+        window.checkSetup = function () {
             console.log('✅ Setup verification:');
             console.log('🦕 Deno runtime: OK');
             console.log('📝 TypeScript: OK');
@@ -542,25 +556,27 @@
             console.log('🎮 Events: OK');
             alert('✅ All systems verified! Foundation is ready for Stage 2.');
         };
-        
-        window.showFeatures = function() {
+
+        window.showFeatures = function () {
             if (game) {
                 game.gameState.showWelcome = false;
                 game.showFeatures = true;
                 console.log('✨ Features demonstration activated');
             }
         };
-        
+
         // Initialize everything
         initGame();
     </script>
 </body>
+
 </html>
-        import { Game } from './game-stage1.js';
-        
-        const canvas = document.getElementById('gameCanvas');
-        const game = new Game(canvas);
-        game.start();
-    </script>
+import { Game } from './game-stage1.js';
+
+const canvas = document.getElementById('gameCanvas');
+const game = new Game(canvas);
+game.start();
+</script>
 </body>
+
 </html>
