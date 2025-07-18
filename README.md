@@ -1,4 +1,4 @@
-# 🦕 Dino Runner Game - Stage 1: Foundation & Setup
+# 🦕 Dino Runner Game
 
 A comprehensive tutorial series for building a Dino Runner game using Deno and
 TypeScript.
@@ -10,7 +10,7 @@ TypeScript.
 To run this project locally, you will need to install [Deno](https://deno.com/).
 
 You can clone and deploy this project immediately to start building the Dino
-Runner game.
+Runner game.<br>
 
 [![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial.git).
 
