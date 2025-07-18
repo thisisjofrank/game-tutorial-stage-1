@@ -10,9 +10,9 @@ TypeScript.
 To run this project locally, you will need to install [Deno](https://deno.com/).
 
 You can clone and deploy this project immediately to start building the Dino
-Runner game.<br>
+Runner game.
 
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial.git).
+[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial.git)
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
