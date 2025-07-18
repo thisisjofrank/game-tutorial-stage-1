@@ -1,15 +1,18 @@
-# 🦕 Deno Dinosaur Game Tutorial
+# 🦕 Dino Game Tutorial - Stage 1: Foundation & Setup
 
-A comprehensive step-by-step tutorial for building a customizable dinosaur game using Deno, TypeScript, and modern web technologies.
+A comprehensive 24-stage tutorial series for building a Chrome Dino-style game using Deno and TypeScript.
 
-## 🎯 Tutorial Overview
+## 🎯 **Current Stage: 1 - Foundation & Setup**
 
-This tutorial teaches Deno development by building a complete game from scratch. Each stage builds on the previous one, introducing new concepts and features progressively.
+This repository contains **Stage 1** of the tutorial, which focuses on establishing the foundation and development environment.
 
-## 📚 Tutorial Structure
-
-### **Stage Branches**
-Each stage has its own branch with complete working code:
+### ✅ **Stage 1 Accomplishments:**
+- ✅ Deno server setup with TypeScript support
+- ✅ Canvas initialization and rendering pipeline  
+- ✅ Event handling system foundation
+- ✅ Game class architecture
+- ✅ Interactive demonstration system
+- ✅ Professional UI design
 
 - `stage-1-setup` - Deno environment and basic server
 - `stage-2-canvas` - HTML5 Canvas and animation
