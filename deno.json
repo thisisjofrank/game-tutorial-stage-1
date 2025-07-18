@@ -4,6 +4,6 @@
     "start": "deno run --allow-net --allow-read --allow-env main.ts"
   },
   "imports": {
-    "@std/http": "jsr:@std/http@1"
+    "@oak/oak": "jsr:@oak/oak@17"
   }
 }

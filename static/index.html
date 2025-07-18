@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>🦕 Dino Runner</title>
+</head>
+
+<body>
+    <main>
+        <h1>🦕 Dino Runner</h1>
+
+        <section class="intro">
+            <h2>Step 1: Setting up an HTTP Server</h2>
+            <p>This is the first step in our Dino Runner game development journey. We'll set up a basic HTTP server
+                using Deno and the Oak framework.</p>
+
+            <ol>
+                <li>Start by deploying this repository: <br><a
+                        href="https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial.git"><img
+                            src="https://deno.com/button" alt="Deploy on Deno" /></a>
+                </li>
+                <li>Clone your newly created repo locally to edit the code</li>
+            </ol>
+        </section>
+
+
+        <section class="health-check">
+            <h3>🔧 Server Status</h3>
+            <p>Check that everything is working: <a href="/health" target="_blank">Health Check Endpoint</a></p>
+            <p><small>Should return:
+                    <code>{"status": "ok", "message": "🦕 Stage 1 - Dino server is healthy!"}</code></small></p>
+        </section>
+
+        <section class="code-example">
+            <h4>📋 Key Technologies Used:</h4>
+            <p><span class="highlight">Deno Runtime:</span> Modern JavaScript/TypeScript runtime</p>
+            <p><span class="highlight">Oak Framework:</span> Middleware framework for Deno's HTTP server</p>
+            <p><span class="highlight">Static File Serving:</span> Serving HTML, CSS, and JS files</p>
+            <p><span class="highlight">API Routing:</span> Basic REST endpoint structure</p>
+        </section>
+
+        <section class="next-steps">
+            <h3>🚀 Ready for Stage 2?</h3>
+            <p>Stage 1 establishes our server foundation. In Stage 2, we'll add:</p>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li>HTML5 Canvas setup</li>
+                <li>Basic game loop structure</li>
+                <li>Animation timing</li>
+                <li>Input handling foundation</li>
+            </ul>
+            <br>
+            <a href="index-stage1.html" class="demo-link">🎮 View Interactive Demo</a>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple client-side health check
+        async function checkHealth() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                console.log('🎉 Server health check:', data);
+            } catch (error) {
+                console.error('❌ Health check failed:', error);
+            }
+        }
+
+        // Run health check when page loads
+        checkHealth();
+
+        console.log('🦕 Stage 1: Basic Deno + Oak setup loaded successfully!');
+        console.log('📋 This is the foundation for our 24-stage tutorial series');
+        console.log('🎯 Next: Stage 2 will add HTML5 Canvas and basic game structure');
+    </script>
+</body>
+
+</html>

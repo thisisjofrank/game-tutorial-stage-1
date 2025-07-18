@@ -1,18 +1,33 @@
-import { serveDir } from "@std/http/file-server";
+import { Application } from "jsr:@oak/oak/application";
+import { Router } from "jsr:@oak/oak/router";
 
-const handler = (req: Request): Response => {
-  const url = new URL(req.url);
-  
-  if (url.pathname === "/health") {
-    return new Response("🦕 Stage 1 - Server is healthy!");
+const router = new Router();
+
+router.get("/health", (ctx) => {
+  ctx.response.body = { status: "ok", message: "🦕 Stage 1 - Dino server is healthy!" };
+});
+
+const app = new Application();
+
+// Serve static files first (including index.html)
+app.use(async (context, next) => {
+  try {
+    await context.send({
+      root: `${Deno.cwd()}/static`,
+      index: "index.html",
+    });
+  } catch {
+    await next();
   }
-  
-  return serveDir(req, {
-    fsRoot: "static",
-    urlRoot: "",
-  });
-};
+});
 
-const port = parseInt(Deno.env.get("PORT") || "8001");
-console.log(`🚀 Stage 1 - Server starting on port ${port}`);
-Deno.serve({ port }, handler);
+// Then handle API routes
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+app.listen({ port: 8000 });
+
+console.log("🦕 Stage 1: Basic Deno + Oak server setup complete!");
+console.log("🌐 Server is running on http://localhost:8000");
+console.log("🎯 Visit http://localhost:8000 to see the game");
+console.log("❤️ Health check available at http://localhost:8000/health");
