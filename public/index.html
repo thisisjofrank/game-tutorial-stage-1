@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>🦕 Dino Runner</title>
 </head>
 
@@ -29,7 +29,7 @@
 
         <section class="health-check">
             <h3>🔧 Server Status</h3>
-            <p>Check that everything is working: <a href="/health" target="_blank">Health Check Endpoint</a></p>
+            <p>Check that everything is working: <a href="/api/health" target="_blank">Health Check Endpoint</a></p>
             <p><small>Should return:
                     <code>{"status": "ok", "message": "🦕 Stage 1 - Dino server is healthy!"}</code></small></p>
         </section>
@@ -57,25 +57,7 @@
 
     </main>
 
-    <script>
-        // Simple client-side health check
-        async function checkHealth() {
-            try {
-                const response = await fetch('/health');
-                const data = await response.json();
-                console.log('🎉 Server health check:', data);
-            } catch (error) {
-                console.error('❌ Health check failed:', error);
-            }
-        }
-
-        // Run health check when page loads
-        checkHealth();
-
-        console.log('🦕 Stage 1: Basic Deno + Oak setup loaded successfully!');
-        console.log('📋 This is the foundation for our 24-stage tutorial series');
-        console.log('🎯 Next: Stage 2 will add HTML5 Canvas and basic game structure');
-    </script>
+    <script src="js/game.js" type="module"></script>
 </body>
 
 </html>
