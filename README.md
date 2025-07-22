@@ -128,6 +128,6 @@ By completing Stage 1, you'll have:
 ## Next steps
 
 You can now proceed to
-[Stage 2](https://github.com/thisisjofrank/game-tutorial-stage-2), where we will add a
-canvas element to the landing page and lay the foundations for our game
+[Stage 2](https://github.com/thisisjofrank/game-tutorial-stage-2), where we will
+add a canvas element to the landing page and lay the foundations for our game
 architecture.
