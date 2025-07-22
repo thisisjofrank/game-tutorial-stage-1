@@ -12,7 +12,7 @@ To run this project locally, you will need to install [Deno](https://deno.com/).
 You can clone and deploy this project immediately to start building the Dino
 Runner game.
 
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial.git)
+[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git)
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
@@ -50,6 +50,25 @@ In this file you will see a `dev` task to run the development server and a
 
 This is also where we define our dependencies in the `imports` section, such as
 the Oak framework for building web servers.
+
+#### Deno permissions
+
+Deno requires explicit permissions for file system access, network access, and
+environment variable access, this helps to keep your application secure,
+especially when using third-party modules, you'll be prompted to grant
+permissions if the code you're running requires them, letting you know what your
+code is accessing.
+
+We have set up permissions flags in the commands in the `tasks` section of the
+`deno.json` file specifies the necessary permissions for our application to
+function correctly eg:
+
+```json
+"dev": "deno run --allow-net --allow-read --allow-env --env-file --watch src/main.ts",
+```
+
+These flags allow the server to read files, access the network, and use
+environment variables from a `.env` file.
 
 ### `src/main.ts` - HTTP Server entry point
 
@@ -96,7 +115,7 @@ deno run dev
 
 You can see the application at [http://localhost:8000](http://localhost:8000).
 
-## Stage 1 Accomplishments
+## Stage 1 accomplishments
 
 By completing Stage 1, you'll have:
 
@@ -105,3 +124,10 @@ By completing Stage 1, you'll have:
 - ✅ Implemented static file serving
 - ✅ Built a simple API endpoint
 - ✅ Established project structure for future stages
+
+## Next steps
+
+You can now proceed to
+[Stage 2](https://github.com/thisisjofrank/game-tutorial-stage-2), where we will add a
+canvas element to the landing page and lay the foundations for our game
+architecture.
