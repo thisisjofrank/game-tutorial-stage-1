@@ -14,6 +14,8 @@ Runner game.
 
 [![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git&install=deno+install)
 
+You will need to edit your Deno Deploy build configuration to set the entrypoint of the project to `src/main.ts`.
+
 Once deployed, you can clone the created project to your local machine to work
 on it.
 
