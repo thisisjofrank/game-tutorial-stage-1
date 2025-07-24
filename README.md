@@ -12,7 +12,7 @@ To run this project locally, you will need to install [Deno](https://deno.com/).
 You can clone and deploy this project immediately to start building the Dino
 Runner game.
 
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git?install=deno+install?build=deno+run+start)
+[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git?install=deno+install)
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
