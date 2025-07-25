@@ -3,7 +3,7 @@
 A comprehensive tutorial series for building a Dino Runner game using Deno and
 TypeScript.
 
-## Stage 1: Foundation & Setup
+## Stage 1: Foundation & setup
 
 ### Getting started
 
@@ -14,7 +14,8 @@ Runner game.
 
 [![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git&install=deno+install)
 
-You will need to edit your Deno Deploy build configuration to set the entrypoint of the project to `src/main.ts`.
+You will need to edit your Deno Deploy build configuration to set the entrypoint
+of the project to `src/main.ts`.
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
@@ -106,7 +107,7 @@ health check API endpoint.
 
 Some simple CSS to make the landing page look clean and professional.
 
-## Running the Code
+## Running the code
 
 To run the server, first install the dependencies, then start the server:
 
