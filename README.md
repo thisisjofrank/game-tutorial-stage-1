@@ -9,7 +9,7 @@ TypeScript.
 
 Deploy this stage and explore the code.
 
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git&install=deno+install)
+[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git&install=deno+install&mode=dynamic&entrypoint=src/main.ts)
 
 This button will create a new GitHub repository with the code from this stage
 and deploy it to Deno Deploy, you'll be able to visit the deployed application
