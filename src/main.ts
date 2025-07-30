@@ -1,7 +1,7 @@
-import { Application } from "jsr:@oak/oak/application";
+import { Application } from "@oak/oak/application";
 import { apiRouter } from "./routes/api.routes.ts";
 
-const PORT = parseInt(Deno.env.get("PORT") || "8000");
+const PORT = parseInt(Deno.env.get("PORT") || "8001");
 const HOST = Deno.env.get("HOST") || "localhost";
 
 const app = new Application();
