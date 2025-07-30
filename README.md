@@ -7,15 +7,11 @@ TypeScript.
 
 ### Getting started
 
-To run this project locally, you will need to install [Deno](https://deno.com/).
+This is a monorepo containing multiple stages of the Dino Runner game tutorial.
 
-You can clone and deploy this project immediately to start building the Dino
-Runner game.
-
-[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-1.git&install=deno+install)
-
-You will need to edit your Deno Deploy build configuration to set the entrypoint
-of the project to `src/main.ts`.
+Each stage is a separate package that builds on the previous one. The first
+stage sets up the foundation for the game, including a basic web server, static
+file
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
